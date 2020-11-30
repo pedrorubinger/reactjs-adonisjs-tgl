@@ -25,7 +25,10 @@ api.interceptors.response.use((response) => response, (error) => {
       title: 'Session Expired',
       text: 'Your session has expired! Please sign in again to continue using the system',
       icon: 'warning'
-    }).then(() => window.location.reload());
+    }).then(() => {
+      localStorage.clear();
+      window.location.reload();
+    });
   }
 
   return Promise.reject(error);

@@ -5,13 +5,12 @@ import { Redirect, Route } from 'react-router-dom';
 import { Creators as AuthActions } from '../../store/ducks/auth';
 import ProgressBar from '../UI/ProgressBar';
 
-const PrivateRoute = ({ auth, logout, checkAuth, component: Component, ...rest }) => {
+const PrivateRoute = ({ auth, checkAuth, component: Component, ...rest }) => {
     const token = localStorage.getItem('token');
 
     useEffect(() => {
         if(token && !auth.validated) checkAuth();
-        if(auth.validated && !auth.isAuthenticated) logout();
-    }, [checkAuth, auth.validated, token, auth.isAuthenticated, logout]);
+    }, [checkAuth, auth.validated, token, auth.isAuthenticated]);
 
     if(!token)
         return <Redirect to="/login" />
@@ -20,7 +19,7 @@ const PrivateRoute = ({ auth, logout, checkAuth, component: Component, ...rest }
         return <ProgressBar />;
 
     if(auth.error && auth.error.status === 500)
-        return <h2>Server Error. Try again later.</h2>
+        return <h2>Server Error. Please try again later.</h2>
     
     return <Route {...rest} render={props => (
             auth.isAuthenticated
@@ -31,8 +30,7 @@ const PrivateRoute = ({ auth, logout, checkAuth, component: Component, ...rest }
 
 const mapStateToProps = (state) => ({ auth: state.auth });
 const mapDispatchToProps = (dispatch) => ({
-    checkAuth: () => dispatch(AuthActions.checkAuthStart()),
-    logout: () => dispatch(AuthActions.logout())
+    checkAuth: () => dispatch(AuthActions.checkAuthStart())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(PrivateRoute);

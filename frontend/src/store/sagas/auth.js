@@ -9,10 +9,12 @@ export function* checkAuthSaga(action) {
 
         yield put(AuthActions.checkAuthSuccess(response.data.userId));
     } catch (err) {
-        const errorData = yield {
-            status: err.response.status,
-            message: err.response.data.message
-        };
+        const errorData = err.response
+            ? yield {
+                status: err.response.status,
+                message: err.response.data.message
+            }
+            : yield { status: 500, message: 'Server error' };
 
         yield put(AuthActions.checkAuthFailure(errorData));
     }

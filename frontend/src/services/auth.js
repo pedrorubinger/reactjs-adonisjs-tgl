@@ -3,16 +3,17 @@ import api from './api';
 const errorHandling = (err) => {
     const errors = {};
 
-    if(Array.isArray(err.response.data))
+    if(err.response && Array.isArray(err.response.data))
         err.response.data.forEach((error) => errors[error.field] = error.message);
     else {
-        if(err.response.status === 401)
+        if(err.response && err.response.status === 401) {
             return {
                 success: false,
                 errors: { 'password': 'Password is incorrect.' }
             };
+        }
 
-        return { success: false, errors: { 'unexpected': 'Unexpected error!' } };
+        return { success: false, errors: { 'server': 'Server error!' } };
     }
 
     return { success: false, errors: errors };
