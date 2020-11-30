@@ -1,0 +1,65 @@
+.Container {
+    display: flex;
+    margin-top: 20px;
+}
+
+.Container:last-child {
+    padding-bottom: 20px;
+}
+
+.CartMarkerBox {
+    display: flex;
+    align-items: center;
+}
+
+.CartMarkerBox svg {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.GameContent {
+    display: inline-flex;
+    flex-direction: column;
+    padding-right: 20px;
+}
+
+.GameContent > * {
+    padding: 8px 0;
+}
+
+.Numbers {
+    text-align: left;
+    font: italic normal bold 20px 'Helvetica Neue', Arial, sans-serif;
+    letter-spacing: 0px;
+    color: #868686;
+    word-break: break-word;
+}
+
+.CartNumbers {
+    text-align: left;
+    font: italic normal bold 14px 'Helvetica Neue', Arial, sans-serif;
+    letter-spacing: 0px;
+    color: #868686;
+    display: inline;
+    word-break: break-word;
+}
+
+.Info {
+    text-align: left;
+    font: normal normal normal 17px 'Helvetica Neue', Arial, sans-serif;
+    letter-spacing: 0px;
+    color: #868686;
+    height: auto;
+    padding: 0;
+}
+
+@media (max-width: 460px) {
+    .Info {
+        font-size: 12px;
+    }
+
+    .Numbers {
+        font-size: 15px;
+        word-break: break-word;
+    }
+}

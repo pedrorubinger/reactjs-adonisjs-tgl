@@ -1,0 +1,8 @@
+{
+    "required": "The {{field}} is required!",
+    "email": "You must provide a valid email!",
+    "unique": "This {{field}} is already registered!",
+    "regex": "The {{field}} format is invalid!",
+    "min": "Your {{field}} must be at least {{argument.0}} characters!",
+    "max": "Your {{field}} must be a maximum of {{argument.0}} characters!"
+}

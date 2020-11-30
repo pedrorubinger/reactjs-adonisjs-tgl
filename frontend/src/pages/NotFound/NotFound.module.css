@@ -1,0 +1,48 @@
+.Container {
+    height: 100%;
+}
+
+.Content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.MessageBox {
+    width: 50%;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 600px;
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fcf9f9;
+    box-shadow: 2px 2px 2px #d3d3d3;
+}
+
+.Title {
+    font-size: 40px;
+}
+
+.Message {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+@media (max-width: 900px) {
+    .Container {
+        height: calc(100vh - 70px);
+    }
+}
+
+@media (max-width: 600px) {
+    .Message {
+        font-size: 15px;
+    }
+}

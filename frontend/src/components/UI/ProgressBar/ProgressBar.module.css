@@ -1,0 +1,9 @@
+.Container {
+    width: 100%;
+}
+
+.ProgressArea {
+    width: 1%;
+    height: 5px;
+    background-color: rgba(2, 161, 127, 0.89);
+}

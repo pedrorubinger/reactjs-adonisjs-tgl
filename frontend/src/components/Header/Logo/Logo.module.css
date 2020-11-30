@@ -1,0 +1,17 @@
+.Logo {
+    width: fit-content;
+}
+
+.Title {
+    text-align: center;
+    font: italic normal bold 44px/70px 'Helvetica Neue', Arial, sans-serif;
+    letter-spacing: 0px;
+    color: #707070;
+}
+
+.Marker {
+    width: 107px;
+    height: 7px;
+    background: #B5C401 0% 0% no-repeat padding-box;
+    border-radius: 6px;
+}

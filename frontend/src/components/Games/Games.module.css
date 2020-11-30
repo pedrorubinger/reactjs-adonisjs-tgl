@@ -1,0 +1,51 @@
+.Container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 10vw;
+    margin-bottom: 20px;
+}
+ 
+.Error {
+    text-align: center;
+    color: rgb(185, 45, 45);
+    margin: 30px auto;
+}
+
+.Error h2 {
+    margin-bottom: 20px;
+}
+
+.Empty {
+    text-align: center;
+    font: italic normal bold 20px 'Helvetica Neue', Arial, sans-serif;
+    color: #707070;
+    margin-top: 5vh;
+    padding-top: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Empty strong {
+    color: #B5C401;
+}
+
+@media (max-width: 1055px) {
+    .Container {
+        margin: auto;
+        width: 96%;
+        justify-content: center;
+        border: none;
+    }
+
+    .Empty {
+        margin: 0 auto 30px auto;
+        min-height: 100%;
+    }
+}
+
+@media (max-width: 460px) {
+    .GameType {
+        font-size: 16px;
+    }
+}

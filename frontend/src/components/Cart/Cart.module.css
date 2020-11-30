@@ -1,0 +1,78 @@
+.Container {
+    background-color: #FFFFFFFF;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #E2E2E2;
+    border-radius: 10px;
+    opacity: 1;
+    min-width: 400px;
+    margin-bottom: 60px;
+    max-height: 600px;
+    box-shadow: 3px 3px 2px rgb(224, 221, 221);
+}
+
+.Title {
+    padding-top: 20px;
+    text-align: center;
+    font: italic normal bold 24px 'Helvetica Neue', Arial, sans-serif;
+    letter-spacing: 0px;
+    color: #707070;
+    text-transform: uppercase;
+    opacity: 1;
+}
+
+.CartContent {
+    padding: 15px;
+    max-height: 400px;
+    overflow: auto;
+}
+
+.CartContent > div:last-child {
+    margin-bottom: 15px;
+}
+
+.EmptyCart {
+    margin-top: 20px;
+    text-align: center;
+    font: normal normal italic 22px 'Helvetica Neue', Arial, sans-serif;
+    letter-spacing: 0px;
+    color: #868686;
+}
+
+.EmptyCart > p {
+    margin-bottom: 25px;
+}
+
+.Price {
+    text-align: center;
+    font: normal normal 300 24px 'Helvetica Neue', Arial, sans-serif;
+    letter-spacing: 0px;
+    color: #707070;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    padding-top: 20px;
+    border-top: 2px solid #dddddd;
+    line-height: 2;
+}
+
+.Price strong {
+    font-weight: bold;
+    font-style: italic;
+}
+
+.ButtonBox {
+    background: #F4F4F4 0% 0% no-repeat padding-box;
+    border: 1px solid #E2E2E2;
+}
+
+@media (max-width: 1410px) {
+    .Container {
+        margin-bottom: 60px;
+        width: 90%;
+    }
+}
+
+@media (max-width: 380px) {
+    .CartContent {
+        padding-left: 25px;
+    }
+}

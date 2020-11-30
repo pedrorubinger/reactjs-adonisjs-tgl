@@ -1,0 +1,15 @@
+.ButtonsContainer button {
+    margin: 0 10px;
+}
+
+@media (max-width: 510px) {
+    .ButtonsContainer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ButtonsContainer button {
+        width: 200px;
+        margin: 4px auto;
+    }
+}

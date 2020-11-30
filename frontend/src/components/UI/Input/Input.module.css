@@ -1,0 +1,51 @@
+.Input {
+    display: block;
+    border: none;
+    border-bottom: 2px solid #EBEBEB;
+    opacity: 1;
+    width: 100%;
+    text-align: left;
+    font: italic normal bold 17px/70px 'Helvetica Neue', Arial, sans-serif;
+    letter-spacing: 0px;
+    color: #9D9D9D;
+    opacity: 1;
+    padding: 0 15px;
+    margin-top: 2px;
+}
+
+.Input:first-child {
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+}
+
+.InputError {
+    border-bottom-right-radius: 7px;
+    border-bottom-left-radius: 7px;
+    border-bottom: 2px solid rgb(247, 86, 86);
+}
+
+Input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #9D9D9D;
+}
+
+Input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #9D9D9D;
+    opacity:  1;
+}
+
+Input::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #9D9D9D;
+    opacity:  1;
+}
+
+Input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #9D9D9D;
+}
+
+Input::-ms-input-placeholder { /* Microsoft Edge */
+    color: #9D9D9D;
+}
+
+Input::placeholder { /* Most modern browsers support this now. */
+    color: #9D9D9D;
+}

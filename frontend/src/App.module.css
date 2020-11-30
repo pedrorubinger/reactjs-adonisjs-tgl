@@ -1,0 +1,35 @@
+.Container {
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 3.5rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    background: #F7F7F7 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+body, input, button {
+    font: 14px 'Helvetica Neue', Arial, sans-serif;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+}
+
+ul li {
+    list-style: none;
+}

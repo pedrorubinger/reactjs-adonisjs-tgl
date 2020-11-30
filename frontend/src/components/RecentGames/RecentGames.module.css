@@ -1,0 +1,66 @@
+.Container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 10vw;
+    margin-top: 20px;
+}
+
+.TitleContainer {
+    display: flex;
+    align-items: center;
+}
+
+.Title {
+    text-align: center;
+    font: italic normal bold 24px 'Helvetica Neue', Arial, sans-serif;;
+    letter-spacing: 0px;
+    color: #707070;
+    text-transform: uppercase;
+}
+
+.Filters {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 35px;
+}
+
+.FiltersTitle {
+    text-align: left;
+    font: italic normal normal 17px/70px Helvetica Neue;
+    letter-spacing: 0px;
+    color: #868686;
+    margin-right: 5px;
+}
+
+
+@media (max-width: 1055px) {
+    .Container {
+        margin: 20px 0;
+        border-bottom: 2px solid rgb(221, 221, 221);
+    }
+
+    .TitleContainer {
+        margin-top: 25px;
+        flex-direction: column;
+    }
+
+    .Filters {
+        margin: auto;
+    }
+
+    .Title {
+        margin-bottom: 15px;
+    }
+
+    .Container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 500px) {
+    .Filters {
+        flex-direction: column;
+    }
+}
