@@ -3,7 +3,7 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 
 import styles from './Header.module.css';
 import Logo from './Logo';
-import ArrowButton from '../UI/Buttons/ArrowButton';
+import ArrowButton from '../../UI/Buttons/ArrowButton';
 
 const Header = ({ setSideBar, items }) => {
     const [mobileMenu, setMobileMenu] = useState(window.innerWidth <= 590);

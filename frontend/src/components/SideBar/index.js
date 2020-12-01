@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import styled from 'styled-components';
-import Header from '../Header';
+import Header from './Header';
 import ArrowButton from '../UI/Buttons/ArrowButton';
 import { Creators as AuthActions } from '../../store/ducks/auth';
 
