@@ -15,7 +15,7 @@ class GameController {
         const { page } = request.get()
         const sqlFilter = params.filter === 'all'
             ? `bets.id LIKE '%'`
-            : `bets.id = '${params.filter}'`;
+            : `bets.id = '${params.filter}'`
 
         const games = await Database
             .select(
