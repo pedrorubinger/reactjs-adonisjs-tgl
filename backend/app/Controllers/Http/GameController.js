@@ -13,8 +13,11 @@ class GameController {
 
     async index ({ request, params }) {
         const { page } = request.get()
+        const sqlFilter = params.filter === 'all'
+            ? `bets.id LIKE '%'`
+            : `bets.id = '${params.filter}'`;
 
-        const games =  await Database
+        const games = await Database
             .select(
                 'games.id',
                 'user_id',
@@ -25,11 +28,7 @@ class GameController {
             )
             .from('games')
             .innerJoin('bets', 'games.bet_id', 'bets.id')
-            .where('user_id', params.user)
-            .andWhereRaw(params.filter === 'all'
-                ? "bets.id LIKE '%'"
-                : `bets.id = '${params.filter}'`
-            )
+            .whereRaw(`user_id = ${params.user} AND ${sqlFilter}`)
             .paginate(page, 10)
 
         return games
